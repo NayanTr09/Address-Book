@@ -11,7 +11,7 @@ public class AddressBook {
         Scanner in = new Scanner(System.in);
         int Flag = 0;
         while(Flag != 1) {
-            System.out.println("Kindly Enter choice \n 1. Add details to contact list \n 2. Edit details \n 3. Display details \n 4. Quit");
+            System.out.println("Kindly Enter choice \n 1. Add details to contact list \n 2. Edit details \n 3. Display details \n 4. Remove Contact \n 5. Quit");
             int AddDetails = in.nextInt();
             if (AddDetails == 1) {
                 System.out.println("Enter first name");
@@ -45,7 +45,17 @@ public class AddressBook {
                     System.out.println(details.toString());
                 }
             }
-            else if (AddDetails == 4)
+            else if (AddDetails == 4) {
+                System.out.println("Enter name of the user in contact list");
+                String NameSearch = in.next();
+                for (int i = 0; i < contact.size(); i++) {
+                    if (NameSearch.equals(String.valueOf(contact.get(i).getFirstname()))) {
+                        contact.remove(i);
+                    }
+                    System.out.println("Contact deleted successfully!");
+                }
+            }
+            else if (AddDetails == 5)
             {
                 Flag=1;
             }
