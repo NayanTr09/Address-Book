@@ -1,8 +1,5 @@
 package com.addressbook;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Contacts {
     public String Firstname, Address, Email;
     public String Lastname, City, Zip;
@@ -32,8 +29,43 @@ public class Contacts {
         this.Firstname = FirstName;
     }
 
-    public String toString() {
+    public String getAddress() {
+        return Address;
+    }
 
-        return "Contact [name=" + this.Firstname + ", address=" + this.Address + "]";
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getLastname() {
+        return Lastname;
+    }
+
+    public void setLastname(String lastname) {
+        Lastname = lastname;
+    }
+
+    public String getCity() {
+        return City;
+    }
+
+    public void setCity(String city) {
+        City = city;
+    }
+
+    public String getZip() {
+        return Zip;
+    }
+
+    public void setZip(String zip) {
+        Zip = zip;
     }
 }
