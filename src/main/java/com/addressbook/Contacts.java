@@ -68,4 +68,16 @@ public class Contacts {
     public void setZip(String zip) {
         Zip = zip;
     }
+
+    @Override
+    public String toString() {
+        return "Contacts{" +
+                "Firstname='" + Firstname + '\'' +
+                ", Lastname='" + Lastname + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Address='" + Address + '\'' +
+                ", City='" + City + '\'' +
+                ", Zip='" + Zip + '\'' +
+                '}';
+    }
 }
